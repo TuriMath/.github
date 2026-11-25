@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 420" width="1280" height="420">
+  <rect width="1280" height="420" fill="#14161d"/>
+  <g stroke="#232734" stroke-width="1">
+    <path d="M0 70H1280M0 140H1280M0 210H1280M0 280H1280M0 350H1280"/>
+    <path d="M160 0V420M320 0V420M480 0V420M640 0V420M800 0V420M960 0V420M1120 0V420"/>
+  </g>
+  <text x="80" y="170" fill="#f4f1ea" font-family="Georgia, 'Times New Roman', serif" font-size="96" font-weight="700">TuriMath</text>
+  <text x="84" y="222" fill="#b9b4a8" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-style="italic">Classic mathematics, machine-checked by a team of AI agents.</text>
+  <g font-family="'DejaVu Sans Mono', Menlo, Consolas, monospace" font-size="22">
+    <text x="84" y="300" fill="#6f7a94">-- nothing counts until Lean says so</text>
+    <text x="84" y="336" fill="#e8a13a">theorem</text>
+    <text x="190" y="336" fill="#f4f1ea">main : A.Statement :=</text>
+    <text x="480" y="336" fill="#e8a13a">by</text>
+    <text x="520" y="336" fill="#f4f1ea">…</text>
+    <text x="84" y="372" fill="#6f7a94">-- ✓ lake build · no sorry · propext, Classical.choice, Quot.sound</text>
+  </g>
+  <g font-family="Georgia, 'Times New Roman', serif" fill="#e8a13a" opacity="0.9">
+    <text x="1010" y="175" font-size="120">∀</text>
+    <text x="1110" y="250" font-size="90">∃</text>
+    <text x="1020" y="330" font-size="80">⊢</text>
+  </g>
+</svg>
