@@ -1,0 +1,54 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="common.css">
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" style="display:block">
+<defs>
+ <radialGradient id="bg" cx="45%" cy="40%" r="75%"><stop offset="0" stop-color="#17498F"/><stop offset=".45" stop-color="#123E7C"/><stop offset="1" stop-color="#0B2A57"/></radialGradient>
+ <pattern id="gMinor" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M 32 0 L 0 0 0 32" fill="none" stroke="#EAF2FF" stroke-width="1" opacity=".07"/></pattern>
+ <pattern id="gMajor" width="160" height="160" patternUnits="userSpaceOnUse"><path d="M 160 0 L 0 0 0 160" fill="none" stroke="#EAF2FF" stroke-width="1.5" opacity=".13"/></pattern>
+ <filter id="chalk" x="-5%" y="-5%" width="110%" height="110%">
+  <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="3" result="n1"/>
+  <feDisplacementMap in="SourceGraphic" in2="n1" scale="5" xChannelSelector="R" yChannelSelector="G" result="d"/>
+  <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="1" seed="13" result="n2"/>
+  <feColorMatrix in="n2" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  -2.4 0 0 0 2.15" result="m"/>
+  <feComposite in="d" in2="m" operator="in"/>
+ </filter>
+ <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+ <pattern id="hatch" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="12" stroke="#EAF2FF" stroke-width="2.2" opacity=".75"/></pattern>
+</defs>
+<rect width="1280" height="420" fill="url(#bg)"/>
+<rect width="1280" height="420" fill="url(#gMinor)"/><rect width="1280" height="420" fill="url(#gMajor)"/>
+<rect x="14" y="14" width="1252" height="392" fill="none" stroke="#EAF2FF" stroke-opacity=".22" stroke-width="2"/>
+<g filter="url(#chalk)">
+  <text x="70" y="160" class="hand" font-size="132" font-weight="700" fill="#EAF2FF">TuriMath</text>
+  <path d="M 62 186 C 160 178 300 192 420 182 S 520 186 548 180" stroke="#FF7A1A" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <!-- right triangle: a=240 (base), b=180 (height), c=300 -->
+  <path d="M 700 120 L 940 300 L 700 300 Z" fill="none" stroke="#EAF2FF" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M 820 210 L 940 300 L 820 300 Z" fill="url(#hatch)"/>
+  <path d="M 700 276 L 724 276 L 724 300" stroke="#EAF2FF" stroke-width="3" fill="none"/>
+  <text x="664" y="222" class="hand" font-size="44" font-weight="700" fill="#EAF2FF">b</text>
+  
+  <text x="832" y="196" class="hand" font-size="44" font-weight="700" fill="#EAF2FF">c</text>
+  <path d="M 700 330 L 940 330 M 700 330 l 10 -6 M 700 330 l 10 6 M 940 330 l -10 -6 M 940 330 l -10 6" stroke="#8FC1FF" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <text x="812" y="362" class="hand" font-size="36" font-weight="600" fill="#8FC1FF">a</text>
+  <path d="M 860 150 C 880 120 920 110 960 110" stroke="#8FC1FF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <text x="966" y="118" class="hand" font-size="38" font-weight="600" fill="#8FC1FF">a² + b² = c²</text>
+  <g transform="translate(1110 250) scale(0.62)"><g stroke="#EAF2FF" stroke-linecap="round" stroke-linejoin="round" fill="none">
+  <path d="M -55 78 L -62 118" stroke-width="5"/><path d="M 50 80 L 58 118" stroke-width="5"/>
+  <path d="M -90 40 C -100 -60 -30 -110 10 -105 C 80 -100 110 -40 95 30 C 85 80 -80 95 -90 40 Z" fill="#123E7C" stroke-width="6"/>
+  <g transform="translate(-26 -28)"><circle r="20" fill="#123E7C" stroke-width="4"/><circle cx="-8" cy="-3" r="9" fill="#FF7A1A" stroke="none"/></g>
+  <g transform="translate(34 -28)"><circle r="20" fill="#123E7C" stroke-width="4"/><circle cx="-8" cy="-3" r="9" fill="#FF7A1A" stroke="none"/></g>
+  <path d="M -12 22 Q 6 36 24 22" stroke-width="5"/>
+</g></g>
+</g>
+<text x="76" y="232" class="mono" font-size="21" fill="#8FC1FF">classic theorems, machine-checked in Lean 4</text>
+<text x="76" y="262" class="mono" font-size="21" fill="#8FC1FF">by a team of AI agents</text>
+<text x="76" y="352" class="mono" font-size="15" fill="#EAF2FF" opacity=".55">-- nothing counts until Lean says so</text>
+<g transform="translate(940 356)" class="mono">
+  <rect width="312" height="40" fill="#0B2A57" fill-opacity=".5" stroke="#EAF2FF" stroke-opacity=".35" stroke-width="1.5"/>
+  <line x1="110" x2="110" y1="0" y2="40" stroke="#EAF2FF" stroke-opacity=".35" stroke-width="1.5"/>
+  <text x="10" y="16" font-size="9" fill="#8FC1FF" opacity=".8">TURI LABS</text>
+  <text x="10" y="32" font-size="12" font-weight="600" fill="#EAF2FF" opacity=".85">FACTORY 02</text>
+  <text x="122" y="16" font-size="9" fill="#8FC1FF" opacity=".8">TITLE</text>
+  <text x="122" y="32" font-size="12" font-weight="600" fill="#EAF2FF" opacity=".85">TURIMATH · THEOREMS</text>
+</g>
+<rect width="1280" height="420" filter="url(#grain)" style="mix-blend-mode:overlay" opacity=".18"/>
+</svg>

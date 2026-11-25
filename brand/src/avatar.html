@@ -1,0 +1,30 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="common.css">
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" style="display:block">
+<defs>
+ <radialGradient id="bg" cx="45%" cy="40%" r="75%"><stop offset="0" stop-color="#17498F"/><stop offset=".45" stop-color="#123E7C"/><stop offset="1" stop-color="#0B2A57"/></radialGradient>
+ <pattern id="gMinor" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M 32 0 L 0 0 0 32" fill="none" stroke="#EAF2FF" stroke-width="1" opacity=".07"/></pattern>
+ <pattern id="gMajor" width="160" height="160" patternUnits="userSpaceOnUse"><path d="M 160 0 L 0 0 0 160" fill="none" stroke="#EAF2FF" stroke-width="1.5" opacity=".13"/></pattern>
+ <filter id="chalk" x="-5%" y="-5%" width="110%" height="110%">
+  <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="3" result="n1"/>
+  <feDisplacementMap in="SourceGraphic" in2="n1" scale="5" xChannelSelector="R" yChannelSelector="G" result="d"/>
+  <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="1" seed="13" result="n2"/>
+  <feColorMatrix in="n2" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  -2.4 0 0 0 2.15" result="m"/>
+  <feComposite in="d" in2="m" operator="in"/>
+ </filter>
+ <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+ <pattern id="hatch" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="12" stroke="#EAF2FF" stroke-width="2.2" opacity=".75"/></pattern>
+</defs>
+<rect width="512" height="512" fill="url(#bg)"/>
+<rect width="512" height="512" fill="url(#gMinor)"/><rect width="512" height="512" fill="url(#gMajor)"/>
+<g filter="url(#chalk)">
+  <path d="M 70 70 L 125 190 L 180 70 M 92 118 L 158 118" stroke="#8FC1FF" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(276 290) scale(1.55)"><g stroke="#EAF2FF" stroke-linecap="round" stroke-linejoin="round" fill="none">
+  <path d="M -55 78 L -62 118" stroke-width="5"/><path d="M 50 80 L 58 118" stroke-width="5"/>
+  <path d="M -90 40 C -100 -60 -30 -110 10 -105 C 80 -100 110 -40 95 30 C 85 80 -80 95 -90 40 Z" fill="#123E7C" stroke-width="6"/>
+  <g transform="translate(-26 -28)"><circle r="20" fill="#123E7C" stroke-width="4"/><circle cx="-8" cy="-3" r="9" fill="#FF7A1A" stroke="none"/></g>
+  <g transform="translate(34 -28)"><circle r="20" fill="#123E7C" stroke-width="4"/><circle cx="-8" cy="-3" r="9" fill="#FF7A1A" stroke="none"/></g>
+  <path d="M -12 22 Q 6 36 24 22" stroke-width="5"/>
+</g></g>
+</g>
+<rect width="512" height="512" filter="url(#grain)" style="mix-blend-mode:overlay" opacity=".18"/>
+</svg>

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/TuriMath/.github/main/profile/banner.svg" alt="TuriMath: classic mathematics, machine-checked by a team of AI agents" width="820">
+  <img src="https://raw.githubusercontent.com/TuriMath/.github/main/brand/banner.png" alt="TuriMath: classic mathematics, machine-checked by a team of AI agents" width="820">
 </p>
 
 <p align="center">
