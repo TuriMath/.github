@@ -38,8 +38,8 @@ The hard part of machine-checked maths isn't the proof, it's knowing the Lean st
 
 | Tier | What | Why |
 |---|---|---|
-| 0 | Antiquity: Euclid, Pythagoras, infinitely many primes | Calibration; already in Mathlib |
-| 1 | Classics from 1600–1800 | Calibration with harder proofs |
+| 0 | Antiquity: √2 is irrational, infinitely many primes, Pythagoras | Calibration: already in Mathlib, re-proved to test the gate |
+| 1 | 1600–1800 classics: Fermat's little theorem, Wilson's theorem | Calibration, and the first test of the blind-statement pipeline |
 | 2 | Gaps in Freek Wiedijk's [100 theorems](https://www.cs.ru.nl/~freek/100/) list | The first genuinely new work |
 | 3 | Gaps in the [1000+ theorems](https://1000-plus.github.io/) list | Volume |
 | 4 | One textbook chapter | Connected theory, not standalone results |
