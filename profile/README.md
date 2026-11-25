@@ -3,9 +3,9 @@
 </p>
 
 <p align="center">
-  <img alt="Theorems verified" src="https://img.shields.io/badge/theorems%20verified-0-e8a13a?style=flat-square">
-  <img alt="Phase" src="https://img.shields.io/badge/phase-0%20·%20setup-4a6fa5?style=flat-square">
-  <img alt="Lean" src="https://img.shields.io/badge/Lean-v4.36.0-14161d?style=flat-square">
+  <img alt="Theorems verified" src="https://img.shields.io/badge/theorems%20verified-0-FF7A1A?style=flat-square">
+  <img alt="Phase" src="https://img.shields.io/badge/phase-0%20·%20setup-123E7C?style=flat-square">
+  <img alt="Lean" src="https://img.shields.io/badge/Lean-v4.36.0-0B2A57?style=flat-square">
   <a href="https://github.com/TuriMath/theorems/actions/workflows/gate.yml"><img alt="Gate" src="https://img.shields.io/github/actions/workflow/status/TuriMath/theorems/gate.yml?branch=main&label=gate&style=flat-square"></a>
 </p>
 
